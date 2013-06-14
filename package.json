@@ -1,0 +1,45 @@
+{
+  "name": "grunt-leading-indent",
+  "description": "Verifies that files have consistent leading whitespace (all tabs or all spaces).",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jakub-g/grunt-leading-indent",
+  "author": {
+    "name": "Aria Templates",
+    "email": "contact@ariatemplates.com",
+    "url": "http://ariatemplates.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jakub-g/grunt-leading-indent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakub-g/grunt-leading-indent/issues"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "https://github.com/jakub-g/grunt-leading-indent/blob/master/LICENSE"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "bin": {
+    "grunt-leading-indent": "bin/grunt-leading-indent"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "node cli/grunt-cli.js"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.6.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "indent",
+    "indentation",
+    "tabs",
+    "spaces"
+  ]
+}
