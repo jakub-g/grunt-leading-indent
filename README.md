@@ -18,15 +18,19 @@ Then add this line to your project's `grunt.js` gruntfile:
 
 ## Sample usage
 
-    grunt.config.set('leadingIndent.indentation', 'spaces');
-    grunt.config.set('leadingIndent.jsFiles', {
-        src : ['src/**/*.js', 'test/**/*.js']
-    });
-    grunt.config.set('leadingIndent.cssFiles', {
-        src : ['src/**/*.css', 'test/**/*.css']
-    });
-
-    grunt.registerTask('checkStyle', ['leadingIndent:jsFiles', 'leadingIndent:cssFiles']);
+    leadingIndent : {
+        options: {
+            indentation : "spaces"
+        },
+        js : ['Gruntfile.js', 'tasks/**/*.js'],
+        zero: {
+            options: {
+                indentation : "spaces",
+                failIfNoFiles: true
+            },
+            src: ['*.does-not-exist']
+        }
+    }
 
 ## License
 Copyright (c) 2013 Aria Templates

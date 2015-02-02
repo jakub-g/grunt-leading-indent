@@ -25,7 +25,8 @@ module.exports = function(grunt) {
         },
         leadingIndent : { // eating own food
             options: {
-                indentation : "spaces"
+                indentation : "spaces",
+                failIfNoFiles: false
             },
             all : ['Gruntfile.js', 'tasks/**/*.js'],
             zero: ['*.jade']

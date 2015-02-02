@@ -68,7 +68,8 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('leadingIndent', 'Checks that files do not have leading tabs / spaces.', function () {
         var options = this.options({
-          indentation: 'spaces'
+          indentation: 'spaces',
+          failIfNoFiles: false
         });
         var indentation = options.indentation;
         grunt.log.write(('Checking files indentation. Desired indentation: ' + indentation).cyan);
@@ -91,7 +92,11 @@ module.exports = function (grunt) {
                 grunt.warn('Formatting checking failed.'.bold.red);
             }
         } else {
-            grunt.log.warn('No input file to check.');
+            if (options.failIfNoFiles) {
+                grunt.log.error('No input files to check.');
+            } else {
+                grunt.log.warn('No input files to check.');
+            }
         }
 
         // Fail task if errors were logged.
