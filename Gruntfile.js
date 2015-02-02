@@ -24,10 +24,13 @@ module.exports = function(grunt) {
             globals: {}
         },
         leadingIndent : { // eating own food
+            options: {
+                indentation : "spaces"
+            },
             all : ['Gruntfile.js', 'tasks/**/*.js'],
-            indentation : "spaces"
+            zero: ['*.jade']
         }
     });
 
-    grunt.registerTask('default', ['jshint:all', 'leadingIndent:all']);
+    grunt.registerTask('default', ['jshint:all', 'leadingIndent']);
 };
