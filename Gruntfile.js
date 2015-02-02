@@ -29,9 +29,10 @@ module.exports = function(grunt) {
                 failIfNoFiles: false
             },
             all : ['Gruntfile.js', 'tasks/**/*.js'],
-            zero: ['*.jade']
+            zero: ['*.jade'],
+            mixed: 'test/mixed.js'
         }
     });
 
-    grunt.registerTask('default', ['jshint:all', 'leadingIndent']);
+    grunt.registerTask('default', ['jshint:all', 'leadingIndent:all', 'leadingIndent:zero']);
 };
